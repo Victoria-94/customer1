@@ -1,4 +1,4 @@
-spring.application.name=customer
+
 server:
   port: 8081
   error:
@@ -17,7 +17,7 @@ spring:
     schemas: public
 
   datasource:
-    url: jdbc:postgresql://peanut.db.elephantsql.com:5432/qgvxczjy?socketTimeout=3
-    username: qgvxczjy
-    password: fYGbz3ncMcAH4QbF9TEJekcglsIX_hLt
+    url: jdbc:postgresql://lallah.db.elephantsql.com:5432/pwfpqrjx?socketTimeout=3
+    username: pwfpqrjx
+    password: N1e4fcTPHDYkDU8qmpeNngLr--EuTDjD
     driverClassName: org.postgresql.Driver

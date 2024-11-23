@@ -1,6 +1,7 @@
 package customer.customer.entity
 
 import jakarta.persistence.*
+import java.time.LocalDate
 import java.util.*
 
 
@@ -8,17 +9,24 @@ import java.util.*
 @Table(name = "invoice")
 class Invoice {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column (updatable = false, unique = true)
     var id: Long? = null
+
+    @Column(nullable = false)
     var code: String? = null
-    var createdAt: Date? = null
-    var total: Int = 0
+
+    @Column(nullable = false)
+    var createdAt: LocalDate? = null
+
+    @Column(nullable = false, columnDefinition = "Decimal(10, 2)")
+    var total: Double? = null
 
 
     @ManyToOne
-    @JoinColumn(name = "customer_id")
+    @JoinColumn(referencedColumnName =  "id")
     var customer: Customer? = null
 
 }

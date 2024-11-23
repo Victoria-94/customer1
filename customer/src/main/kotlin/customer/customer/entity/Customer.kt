@@ -13,12 +13,9 @@ class Customer {
 
     var nui: String? = null
     var fullName: String? = null
-    var address: String? = null
+    var addres: String? = null
     var age: Int? = 0
+    @Column(updatable = false, unique = true)
     var email: String? = null
-
-
-    @OneToMany(mappedBy = "curses", cascade = [CascadeType.ALL]) //fetch = FetchType.LAZY)
-    val students: List<Students> = listOf()
 
 }

@@ -15,7 +15,7 @@ class CustomerDto {
 
     @NotNull(message = "address cannot be null")
     @NotNull(message = "address cannot be null")
-    var address: String? = null
+    var addres: String? = null
 
 
     @NotNull(message = "age cannot be null")

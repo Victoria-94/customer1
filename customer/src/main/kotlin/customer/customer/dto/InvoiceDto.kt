@@ -2,6 +2,7 @@ package customer.customer.dto
 
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.NotNull
+import java.time.LocalDate
 import java.util.Date
 
 class InvoiceDto {
@@ -12,7 +13,7 @@ class InvoiceDto {
 
     @NotBlank(message = "create_at is required")
     @NotNull(message = "create_at is required")
-    var create_at: Int = 0
+    var createAt: LocalDate? = null
 
 
     @NotBlank(message = "total is required")

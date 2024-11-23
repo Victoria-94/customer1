@@ -8,18 +8,18 @@ object CustomerMapper {
         val customer = Customer()
         customer.fullName = customerDto.fullName
         customer.nui= customerDto.nui
-        customer.address= customerDto.address
+        customer.addres= customerDto.addres
         customer.age= customerDto.age
-        customer.address= customerDto.address
+
         return customer
     }
     fun toDTO(customer: Customer): CustomerDto {
         val customerDto = CustomerDto()
         customerDto.fullName = customer.fullName
         customerDto.nui = customer.nui
-        customerDto.address = customer.address
+        customerDto.addres = customer.addres
         customerDto.age = customer.age
-        customerDto.address = customer.address
+
         return customerDto
 
     }

@@ -7,11 +7,17 @@ object InvoiceMapper {
     fun toEntity(invoiceDto: InvoiceDto): Invoice {
         val invoice = Invoice()
         invoice.code = invoiceDto.code
+        invoice.createdAt = invoiceDto.createAt
+        invoice.total = invoiceDto.total
         return invoice
     }
-}
-fun toDto(invoice: Invoice): InvoiceDto {
-    val invoiceDto = InvoiceDto()
-    invoiceDto.code = invoice.code
-    return invoiceDto
+
+    fun toDTO(invoice: Invoice): InvoiceDto {
+        val invoiceDto = InvoiceDto()
+        invoiceDto.code = invoice.code
+        invoiceDto.createAt = invoice.createdAt
+        invoiceDto.total = invoice.total
+        return invoiceDto
+    }
+
 }

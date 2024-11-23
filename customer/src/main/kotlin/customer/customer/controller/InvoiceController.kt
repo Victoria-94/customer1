@@ -1,5 +1,6 @@
 package customer.customer.controller
 
+import customer.customer.dto.InvoiceDto
 import customer.customer.entity.Invoice
 import customer.customer.service.InvoiceService
 import org.springframework.beans.factory.annotation.Autowired
@@ -13,10 +14,10 @@ class InvoiceController {
 
     @GetMapping
     fun list(): List<Invoice> {
-        return invoiceService.list()
+        return invoiceService.listar()
     }
     @PostMapping
-    fun save(@RequestBody invoice: Invoice): Invoice {
-        return invoiceService.save(invoice)
+    fun save(@RequestBody invoiceDto: InvoiceDto): InvoiceDto {
+        return invoiceService.save(invoiceDto)
     }
 }
